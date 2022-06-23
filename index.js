@@ -4,9 +4,23 @@ let operator;
 let result = 0;
 
 function ValidateOperator() {
-  operator = window.prompt(
-    "Which mathematical operation would you want to perform?\n [+] for Addition: [-] for Substraction: [*] for Multiplication: [/] for division\n Choose One!"
-  );
+  while (checkOperator) {
+    operator = window.prompt(
+      "Which mathematical operation would you want to perform?\n [+] for Addition: [-] for Substraction: [*] for Multiplication: [/] for division\n Choose One!"
+    );
+    if (operator === "+") {
+      checkOperator = false;
+    } else if (operator === "-") {
+      checkOperator = false;
+    } else if (operator === "*") {
+      checkOperator = false;
+    } else if (operator === "/") {
+      checkOperator = false;
+    } else {
+      alert("Incorrect operator. Please choose an operator as enlisted above");
+      continue;
+    }
+  }
   return operator;
 }
 
